@@ -16,7 +16,8 @@ const HomePage = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete((post) => post._id !== id)
+      await axios.delete(`http://localhost:5500/posts/${id}`)
+      setPosts(posts.filter((post) => post._id !== id))
     } catch (error) {
       console.error('Error deleting post', error)
     }
@@ -43,3 +44,5 @@ const HomePage = () => {
     </Container>
   )
 }
+
+export default HomePage;

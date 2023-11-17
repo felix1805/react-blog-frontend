@@ -40,7 +40,7 @@ const NewPostPage = () => {
         </Form.Group>
         <Form.Group>
           <Form.Label>Content</Form.Label>
-          <Form.Control type="textarea" rows={5} name="content" placeholder="Content" onChange={handleChange} required></Form.Control>
+          <Form.Control as="textarea" rows={5} name="content" placeholder="Content" onChange={handleChange} required></Form.Control>
         </Form.Group>
         <Button variant="primary" type="submit">Create</Button>
       </Form>
